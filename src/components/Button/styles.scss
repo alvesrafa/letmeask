@@ -1,0 +1,28 @@
+.container {
+  margin-top: 4rem;
+  height: 3.125rem;
+
+  border-radius: 8px;
+  font-weight: 500;
+  background: #835afd;
+  color: #FFFFFF;
+
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border: 0;
+
+  padding: 0 2rem;
+
+  img {
+    margin-right: .5rem;
+  }
+
+
+  &:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+}

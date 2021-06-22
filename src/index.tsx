@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-import './services/firebase'
+import './services/firebase';
+
+import './styles/global.scss';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,4 +13,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
