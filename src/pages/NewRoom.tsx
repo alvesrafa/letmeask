@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import illustration from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
@@ -5,8 +7,11 @@ import googleIconImg from '../assets/images/google-icon.svg';
 import '../styles/auth.scss';
 
 import { Button } from '../components/Button';
+import { useAuth } from '../hooks/useAuth';
 
 export function NewRoom() {
+  const { user } = useAuth();
+
   return (
     <div id={'pageAuth'}>
       <aside>
@@ -20,6 +25,7 @@ export function NewRoom() {
       <main>
         <div className={'mainContent'}>
           <img src={logoImg} alt="LetMeAsk" />
+          <h1>{user?.name}</h1>
           <h2>Criar uma nova sala</h2>
 
           <form>
@@ -28,7 +34,7 @@ export function NewRoom() {
           </form>
 
           <p>
-            Quer entrar em uma sala existente <a href="#">clique aqui</a>{' '}
+            Quer entrar em uma sala existente <Link to="/">clique aqui</Link>{' '}
           </p>
         </div>
       </main>
