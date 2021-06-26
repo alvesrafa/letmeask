@@ -1,13 +1,12 @@
 .container {
-  margin-top: 4rem;
   height: 3.125rem;
 
   border-radius: 8px;
   font-weight: 500;
   background: #835afd;
-  color: #FFFFFF;
+  color: #ffffff;
 
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -17,12 +16,11 @@
   padding: 0 2rem;
 
   img {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 
-
   &:disabled {
-    opacity: .6;
+    opacity: 0.6;
     cursor: not-allowed;
   }
 }
