@@ -2,8 +2,12 @@ import { ButtonHTMLAttributes } from 'react';
 
 import './styles.scss';
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {};
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  outline?: boolean;
+};
 
-export function Button({ ...rest }: ButtonProps) {
-  return <button className="container" {...rest} />;
+export function Button({ outline = false, ...rest }: ButtonProps) {
+  return (
+    <button className={`container-button ${outline && 'outline'}`} {...rest} />
+  );
 }

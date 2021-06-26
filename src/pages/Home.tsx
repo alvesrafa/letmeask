@@ -38,6 +38,11 @@ export function Home() {
       return;
     }
 
+    if (roomRef.val().deleted_at) {
+      alert('Está sala já foi finalizada.');
+      return;
+    }
+
     history.push(`/rooms/${roomCode}`);
   };
 

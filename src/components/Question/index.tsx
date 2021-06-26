@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import './styles.scss';
 type Props = {
   content: string;
@@ -5,8 +7,9 @@ type Props = {
     name: string;
     avatar: string;
   };
+  children: ReactNode;
 };
-export function Question({ content, author }: Props) {
+export function Question({ content, author, children }: Props) {
   return (
     <div className="question-container">
       <p>{content}</p>
@@ -15,7 +18,7 @@ export function Question({ content, author }: Props) {
           <img src={author.avatar} alt={author.name} />
           <span>{author.name}</span>
         </div>
-        <div></div>
+        <div>{children}</div>
       </footer>
     </div>
   );
