@@ -1,6 +1,5 @@
-import { createContext, ReactNode, useState, useEffect } from 'react';
-
-import { firebase, auth } from '../services/firebase';
+import { createContext, ReactNode, useEffect, useState } from "react";
+import { auth, firebase } from "../services/firebase";
 
 type AuthContextProps = {
   user: User | undefined;
@@ -27,7 +26,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         const { displayName, photoURL, uid } = user;
 
         if (!displayName || !photoURL) {
-          throw new Error('Missing information fro, Google Account');
+          throw new Error("Missing information fro, Google Account");
         }
         setUser({
           id: uid,
@@ -51,7 +50,7 @@ function AuthProvider({ children }: AuthProviderProps) {
       const { displayName, photoURL, uid } = result.user;
 
       if (!displayName || !photoURL) {
-        throw new Error('Missing information fro, Google Account');
+        throw new Error("Missing information fro, Google Account");
       }
       setUser({
         id: uid,
